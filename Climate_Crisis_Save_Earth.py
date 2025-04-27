@@ -72,13 +72,15 @@ while playing:
     print("A. 20 minutes")
     print("B. 10 minutes")
     print("C. 15 minutes")
+    print()
     a3 =(input("Enter your choice (A/B/C):"))
     print()
 
     if a3 == "A" or "a":
         print("Long showers waste water and energy try again next time")
         scores.append(-10)
-        print("Your score so far:")
+        print("Your score so far:", sum(scores))
+        print()
 
     elif a3 == "B" or "b":
         print("Great! Short showers help save water")
@@ -97,10 +99,11 @@ while playing:
         print("Your score so far:", sum(scores))
         print()
 
-    print("You’re done using your laptop and tablet. What do you do?")
+    print("Scenario 4:You’re done using your laptop and tablet. What do you do?")
     print("A.Shut them down and unplug the chargers")
     print("B.Just close the lid and leave them plugged in")
     print("C.Leave everything on and go play outside")
+    print()
     a4 = (input("Enter your choice (A/B/C):"))
     print()
 
@@ -123,16 +126,30 @@ while playing:
     else:
         print("Invalid Input")
         print("Your score so far:", sum(scores))
+    print()
 
 #Calculations
-    total_score = score
-    if total_score >30:
-        print("Great you are a Super hero you have saved earth")
-    elif total_score <20:
-        print("You are really close to saving earth try again")
+    Your_score = sum(scores)
+    Total_score = a1 + a2 + a3
 
-    elif total_score <10:
+    if Your_score >30:
+        print("Great you are a Super hero you have saved earth")
+        print("Your_score =", scores)
+    elif Your_score <20:
+        print("You are really close to saving earth try again")
+        print("Your_score =", scores)
+
+    elif Your_score <10:
         print("Oh no you couldn't save earth Try again next time I'm sure you will be able to save earth")
+        print("Your_score =", scores)
+
+    again = (input("Would you like to try again: yes or no:"))
+    print(again)
+    if again == "no" or "No" or "NO":
+        playing = False
+    else:
+        playing = True
+
 
 
 
