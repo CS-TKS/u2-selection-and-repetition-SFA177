@@ -19,20 +19,21 @@ while playing:
     if a1 == "A"or a1 == "a":
         print("Oh No Fuel increases carbon emission you could have choose a better transport method")
         scores.append(-10)
-        print("Your score so far:",sum(scores))
+        print("Your score so far:", sum(scores))
         print()
 
 
     elif a1 == "B"or a1=="b":
-             print("Nice using a public transport can reduce your carbon footprint by 50% \n ""but if your location is close enough you can use a bike or walk")
+             print("Nice using a public transport can reduce your carbon footprint by 50%"
+                   " \n ""but if your location is close enough you can use a bike or walk")
              scores.append(+5)
-             print("Your score so far", sum(scores))
+             print("Your score so far:", sum(scores))
              print()
 
     elif a1 == "C"or a1=="c":
             print("Great using a bike or walking can reduce alot of carbon emission")
-            scores.append(10)
-            print("Your score so far", sum(scores))
+            scores.append(15)
+            print("Your score so far:", sum(scores))
             print()
 
     else:
@@ -46,27 +47,28 @@ while playing:
     a2 = (input("Enter your choice (A/B/C):"))
     print()
 
-    if a2 == "A":
+    if a2 == "A" or a2 == "a":
         print("You could have choose a better option to save electricity")
-        scores.append(-10)
-        print("Your score so far", sum(scores))
+        scores.append(10)
+        print("Your score so far:", sum(scores))
         print()
 
     elif a2 == "B" or a2 == "b":
-        print("Nice closing the lights save you extra 50 % of your electricity \n but you can make it 100% by closing the fans/Ac")
-        scores.append(5)
-        print("Your score so far", sum(scores))
+        print("Nice closing the lights save you extra 50 % of your electricity"
+              " \n but you can make it 100% by closing the fans/Ac")
+        scores.append(10)
+        print("Your score so far:", sum(scores))
         print()
 
     elif a2 == "C" or a2 == "c":
         print("Great not only you helped earth you also saved electricity")
-        scores.append(5)
-        print("Your score so far", sum(scores))
+        scores.append(15)
+        print("Your score so far:", sum(scores))
         print()
 
     else:
         print("Invalid Input")
-        print("Your score so far:", sum(scores))
+        print("points added:", sum(scores))
     print()
     print("Scenario 3: You take a shower. How long do you stay in?")
     print("A. 20 minutes")
@@ -77,20 +79,20 @@ while playing:
     print()
 
     if a3 == "A" or "a":
-        print("Long showers waste water and energy try again next time")
-        scores.append(-10)
+        print( "Great! Short showers help save water")
+        scores.append(+15)
         print("Your score so far:", sum(scores))
         print()
 
-    elif a3 == "B" or "b":
-        print("Great! Short showers help save water")
-        scores.append(15)
+    elif a3 == "B" or a3 == "b":
+        print( "")
+        scores.append(-15)
         print("Your score so far:", sum(scores))
         print()
 
     elif a3 == "C" or "c":
         print("Decent choice, but you can do even better by using the shower for a bit shorter amount")
-        scores.append(10)
+        scores.append(+10)
         print("Your score so far:", sum(scores))
         print()
 
@@ -109,19 +111,21 @@ while playing:
 
     if a4 == "A" or "a":
         print("Awesome! You saved energy like a real Earth Hero!")
-        scores.append(15)
+        scores.append(+15)
         print("Your score so far:", sum(scores))
         print()
 
     elif a4 == "B" or "b":
         print("Sleep mode still uses power. You can do better")
-        scores.append(10)
+        scores.append(+10)
         print("Your score so far:", sum(scores))
         print()
 
-    elif a4 == "C" or "c":
+    elif a4 == "c" or a4 == "C":
         print("Oh no! Leaving things on wastes electricity")
         scores.append(-10)
+        print("Your score so far:", sum(scores))
+        print()
 
     else:
         print("Invalid Input")
@@ -130,27 +134,22 @@ while playing:
 
 #Calculations
     Your_score = sum(scores)
-    Total_score = a1 + a2 + a3
+    Overall_score = sum(scores)
 
     if Your_score >30:
         print("Great you are a Super hero you have saved earth")
-        print("Your_score =", scores)
+        print("Over all score:", sum(scores))
     elif Your_score <20:
         print("You are really close to saving earth try again")
-        print("Your_score =", scores)
+        print("Over all score:", sum(scores))
 
     elif Your_score <10:
         print("Oh no you couldn't save earth Try again next time I'm sure you will be able to save earth")
-        print("Your_score =", scores)
+        print("Over all score:", sum(scores))
 
     again = (input("Would you like to try again: yes or no:"))
     print(again)
-    if again == "no" or "No" or "NO":
+    if again.lower() == "no":
         playing = False
     else:
         playing = True
-
-
-
-
-
